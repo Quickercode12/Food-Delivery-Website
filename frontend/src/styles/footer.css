@@ -1,0 +1,174 @@
+/* ===========================================
+   🎨 Color Palette (All colors in one place)
+=========================================== */
+:root {
+  --footer-bg: rgb(11, 23, 39);      /* Main footer background */
+  --footer-accent: #c92834;          /* Accent red color */
+  --footer-accent-hover: #ff2e00;    /* Brighter red hover */
+  --footer-text: #f8f8f8;            /* Light heading text */
+  --footer-subtext: #ccc;            /* Lighter gray for links */
+  --footer-border: #222;             /* Border/line color */
+  --footer-dark-bg: #000;            /* Bottom section background */
+  --footer-muted: #777;              /* Muted text */
+  --footer-icon-bg: #222;            /* Social icon background */
+}
+
+/* ===========================================
+   🌟 Footer Section
+=========================================== */
+.footer_container {
+  background: var(--footer-bg) !important;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding-top: 60px;
+  border-top: 2px solid var(--footer-border);
+}
+
+.footer_container_tag {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* ----- Left Content (Logo + Image + Button) ----- */
+.footer_content_O1 {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer_content_image img {
+  width: 100px;
+  height: auto;
+}
+
+.footer_content_text img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer_content_text h1 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: var(--footer-text);
+}
+
+.footer_content_text button {
+  background: var(--footer-accent);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer_content_text button:hover {
+  background: var(--footer-accent-hover);
+}
+
+/* ----- About / Resources Lists ----- */
+.footer_container_about,
+.footer_container_Resources {
+  flex: 1 1 20%;
+}
+
+.footer_container_about h2,
+.footer_container_Resources h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--footer-accent);
+}
+
+.footer_container_about ul,
+.footer_container_Resources ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer_container_about li,
+.footer_container_Resources li {
+  margin-bottom: 10px;
+  color: var(--footer-subtext);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer_container_about li:hover,
+.footer_container_Resources li:hover {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+/* ----- Social Icons ----- */
+.footer_container_Social {
+  flex: 1 1 15%;
+}
+
+.footer_container_Social ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.footer_container_Social li {
+  background: var(--footer-icon-bg);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer_container_Social li:hover {
+  background: var(--footer-accent);
+  transform: scale(1.1);
+}
+
+.footer_container_Social svg {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* ----- Footer Bottom ----- */
+.footer_bottom {
+  text-align: center;
+  padding: 20px 0;
+  background: var(--footer-dark-bg);
+  border-top: 1px solid var(--footer-border);
+  margin-top: 30px;
+}
+
+.footer_bottom p {
+  color: var(--footer-muted);
+  font-size: 0.9rem;
+}
+
+/* ----- Responsive Design ----- */
+@media (max-width: 900px) {
+  .footer_container_tag {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer_content_O1 {
+    flex-direction: column;
+  }
+
+  .footer_container_Social ul {
+    justify-content: center;
+  }
+}
