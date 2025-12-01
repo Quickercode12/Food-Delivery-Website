@@ -1,0 +1,11 @@
+## README.md
+
+**/README.md
+
+# environment files
+.env
+
+# dependency directories
+node_modules
+package-lock.json
+
